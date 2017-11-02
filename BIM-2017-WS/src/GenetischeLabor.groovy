@@ -1,11 +1,9 @@
 
-unreifeDNA = "Transkription DNA NR1H4 chromosome 12, 100867679:100957641"
+unreifeDNA_key = "Transkription DNA NR1H4 chromosome 12, 100867679:100957641"
 String dateipfad =/C:\git\BIM-2017-WS/
 File file = new File(dateipfad + /\files\NR1H4-BIM-Uebung.fasta/)
 println "${file.exists()}"
-FastaReader f = new FastaReader(source: file)
-f.extractData()
-fastaData = f.data;
+fastaData = FastaReader.extractData(file);
 int getIndex(String dna, String firstExon){
     for(int i = 0; i < dna.length()-firstExon.length();i++){
         int counter = 0
@@ -27,9 +25,9 @@ int getStartcodonIndex(String sequence){
     return getIndex(sequence,startcodon)
 }
 int getStopcodonIndex(int startcodonIndex, String sequence){
-    String stopcodon1 = "TAG"
-    String stopcodon2 = "TGA"
-    String stopcodon3 = "TAA"
+    String stopcodon1 = "UAG"
+    String stopcodon2 = "UGA"
+    String stopcodon3 = "UAA"
     String codon
     for(int i = startcodonIndex; i < sequence.length(); i+=3){
 
@@ -48,11 +46,12 @@ int getStopcodonIndex(int startcodonIndex, String sequence){
     println()
     return -1
 }
-String unreifeDNAString = (String)f.data[unreifeDNA];
-String unreifeRNAString = unreifeDNAString.replace('T','U')
+toRnaString= {String dna -> dna.replace('T','U')}
+String unreifeDNAString = fastaData[unreifeDNA_key];
+String unreifeRNAString = toRnaString(unreifeDNAString)
 String reifeDNAString = ''
-for(int i = 1; i < 11;i++) reifeDNAString += f.data["Exon $i"]
-String reifeRNAString = reifeDNAString.replace('T','U')
+for(int i = 1; i < 11;i++) reifeDNAString += fastaData["Exon $i"]
+String reifeRNAString = toRnaString(reifeDNAString)
 println reifeRNAString
 int starcodon = getStartcodonIndex(reifeRNAString)
 println "reife RNA-length is ${reifeRNAString.length()}"
@@ -61,11 +60,11 @@ println "first Startcodon-Index is = ${starcodon}"
 
 println "Stopcodon-Index is = ${getStopcodonIndex(starcodon, reifeRNAString)}"
 println unreifeDNAString.length()
-println "index is = ${getIndex(unreifeRNAString,(String)fastaData["Exon 1"])}"
-println "index is = ${getIndex(unreifeRNAString,(String)fastaData["Exon 2"])}"
-String intron1 = unreifeRNAString.substring(fastaData["Exon 1"].toString().length(), getIndex((String)f.data.get(unreifeDNA),fastaData["Exon 2"]))
+println "index is = ${getIndex(unreifeRNAString,toRnaString(fastaData["Exon 1"]))}"
+println "index is = ${getIndex(unreifeRNAString,toRnaString(fastaData["Exon 2"]))}"
+String intron1 = unreifeRNAString.substring(fastaData["Exon 1"].toString().length(), getIndex(fastaData[unreifeDNA_key],fastaData["Exon 2"]))
 println "Intron 1 hat die Laenge ${intron1.length()} : \n$intron1"
-f.data+=['Intron 1': intron1]
+fastaData+=['Intron 1': intron1]
 FileWriter writer = new FileWriter(dateipfad + "\\files\\NR1H4-Intron-1.fasta")
 writer.write(">Intron 1\n")
 String sequence = fastaData['Intron 1']

@@ -16,7 +16,7 @@
         <entry file="file://$PROJECT_DIR$/src/GenetischeLabor.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
-              <caret line="66" column="9" lean-forward="false" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
+              <caret line="66" column="32" lean-forward="true" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -236,12 +236,12 @@
       <option name="presentableId" value="Default" />
       <updated>1509624326701</updated>
       <workItem from="1509624331347" duration="4123000" />
-      <workItem from="1509629058777" duration="3166000" />
+      <workItem from="1509629058777" duration="3179000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7289000" />
+    <option name="totallyTimeSpent" value="7302000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -343,7 +343,7 @@
     <entry file="file://$PROJECT_DIR$/src/GenetischeLabor.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
-          <caret line="66" column="9" lean-forward="false" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
+          <caret line="66" column="32" lean-forward="true" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
           <folding />
         </state>
       </provider>

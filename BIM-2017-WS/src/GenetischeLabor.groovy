@@ -60,7 +60,7 @@ for(int i = 1; i < 12;i++) {
 }
 
 Set rnaSequences = fastaData.findAll {it.key.toString().contains(' (RNA)')}.keySet()
-FastaConnector.writeData(fastaData,"NR1H4-BIM-Uebung (RNA)",rnaSequences.sort().toArray())
+
 //println reifeRNAString
 fastaData +=["NR1H4-reife-mRNA":reifeRNAString]
 FastaConnector.writeData(fastaData,"NR1H4-reife-mRNA", "NR1H4-reife-mRNA")
@@ -78,4 +78,5 @@ println "Intron 1 hat die Laenge ${intron_1.length()} : \n$intron_1"
 String intron_1_Header = 'Intron 1(RNA)'
 fastaData+=[(intron_1_Header): intron_1]
 FastaConnector.writeData(fastaData, "NR1H4-Intron-1", intron_1_Header)
+//FastaConnector.writeData(fastaData,"NR1H4-BIM-Uebung (RNA)",rnaSequences.sort().toArray())
 

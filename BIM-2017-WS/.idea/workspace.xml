@@ -15,8 +15,8 @@
       <file leaf-file-name="GenetischeLabor.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GenetischeLabor.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="63" column="2" lean-forward="false" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="2" />
+            <state relative-caret-position="218">
+              <caret line="80" column="92" lean-forward="false" selection-start-line="80" selection-start-column="92" selection-end-line="80" selection-end-column="92" />
               <folding>
                 <element signature="n#!!block;n#getIndex#0" expanded="false" />
                 <element signature="n#!!block;n#getStartcodonIndex#0" expanded="false" />
@@ -263,12 +263,12 @@
       <updated>1509624326701</updated>
       <workItem from="1509624331347" duration="4123000" />
       <workItem from="1509629058777" duration="3666000" />
-      <workItem from="1509714134440" duration="9887000" />
+      <workItem from="1509714134440" duration="10355000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17676000" />
+    <option name="totallyTimeSpent" value="18144000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -413,8 +413,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GenetischeLabor.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="63" column="2" lean-forward="false" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="2" />
+        <state relative-caret-position="218">
+          <caret line="80" column="92" lean-forward="false" selection-start-line="80" selection-start-column="92" selection-end-line="80" selection-end-column="92" />
           <folding>
             <element signature="n#!!block;n#getIndex#0" expanded="false" />
             <element signature="n#!!block;n#getStartcodonIndex#0" expanded="false" />
